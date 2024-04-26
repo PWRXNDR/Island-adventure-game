@@ -1,0 +1,69 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Global%20Stylesheet.uss?fileID=7433441132597879392&amp;guid=bf64d4f76cb83e74bbea824b95d512eb&amp;type=3#Global Stylesheet" />
+    <ui:VisualElement name="main-menu-container" class="center" style="display: none;">
+        <ui:VisualElement name="box" class="primary-container">
+            <ui:Label tabindex="-1" text="Bruno&apos;s Island Adventure" display-tooltip-when-elided="true" class="base-text" style="font-size: 80px; -unity-text-align: upper-center;" />
+            <ui:VisualElement name="buttons" style="position: absolute; left: 0; bottom: -50px; width: 100%; flex-direction: row; justify-content: center;">
+                <ui:Button text="Start" display-tooltip-when-elided="true" name="start-button" class="menu-button" />
+            </ui:VisualElement>
+            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Bombs.png?fileID=2800000&amp;guid=4420e8d6e00706f4f84dad51b2169cb1&amp;type=3#Bombs&apos;); width: 332px; height: 174px; position: absolute; top: -150px; left: 200px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="player-info-container" style="position: absolute; left: 50px; top: 50px; flex-direction: row; display: none;">
+        <ui:VisualElement class="stat-container">
+            <ui:Label tabindex="-1" text="Health" display-tooltip-when-elided="true" class="stat-name" />
+            <ui:Label tabindex="-1" text="000" display-tooltip-when-elided="true" name="health-label" class="stat-value" />
+        </ui:VisualElement>
+        <ui:VisualElement class="stat-container">
+            <ui:Label tabindex="-1" text="Potions" display-tooltip-when-elided="true" class="stat-name" />
+            <ui:Label tabindex="-1" text="000" display-tooltip-when-elided="true" name="potions-label" class="stat-value" />
+        </ui:VisualElement>
+        <ui:VisualElement name="quest-item-icon" style="width: 60px; height: 60px; background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Quest%20Item.png?fileID=2800000&amp;guid=82f427d1fad0fe5459bae6dfe603876a&amp;type=3#Quest Item&apos;); margin-left: 20px; display: none;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="dialogue-container" style="position: absolute; left: 0; bottom: 0; width: 100%; padding-left: 60px; padding-right: 60px; padding-top: 60px; padding-bottom: 60px; display: none;">
+        <ui:VisualElement class="primary-container">
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="dialogue-text" class="base-text" style="-unity-font-style: normal; font-size: 36px; color: rgb(118, 62, 62); -unity-text-outline-width: 0;" />
+            <ui:Button text="Next" display-tooltip-when-elided="true" name="dialogue-next-button" class="menu-button" style="position: absolute; right: 50px; bottom: -40px; display: none;" />
+            <ui:VisualElement name="choices-group" style="position: absolute; right: 50px; bottom: -40px; flex-direction: row; display: none;">
+                <ui:Button text="No" display-tooltip-when-elided="true" name="no-button" class="menu-button" />
+                <ui:Button text="Yes" display-tooltip-when-elided="true" name="yes-button" class="menu-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="quest-item-container" style="width: 100%; height: 100%; align-items: center; justify-content: center; display: none;">
+        <ui:VisualElement class="primary-container" style="width: 600px; height: 500px; align-items: center;">
+            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Paper%20BG.png?fileID=2800000&amp;guid=b1aa48f59209ca54f8ad1e5966d3e81d&amp;type=3#Paper BG&apos;); width: 350px; height: 350px; align-items: center; justify-content: center;">
+                <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Quest%20Item%20Large.png?fileID=2800000&amp;guid=44d1dd07413f62049b0e1c783060a46b&amp;type=3#Quest Item Large&apos;); width: 250px; height: 250px;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="quest-item-label" class="base-text" style="font-size: 40px; -unity-text-align: upper-center; margin-top: 40px;" />
+            <ui:Button text="Claim" display-tooltip-when-elided="true" class="menu-button" style="position: absolute; bottom: -50px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="victory-container" style="width: 100%; height: 100%; align-items: center; justify-content: center; display: none;">
+        <ui:VisualElement class="primary-container" style="width: 600px; height: 500px; align-items: center;">
+            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Paper%20BG.png?fileID=2800000&amp;guid=b1aa48f59209ca54f8ad1e5966d3e81d&amp;type=3#Paper BG&apos;); width: 350px; height: 350px; align-items: center; justify-content: center;">
+                <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Victory.png?fileID=2800000&amp;guid=10647c5842ded2c41b23befdaa14e943&amp;type=3#Victory&apos;); width: 250px; height: 250px;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Victory!!!" display-tooltip-when-elided="true" class="base-text" style="font-size: 40px; -unity-text-align: upper-center; margin-top: 40px;" />
+            <ui:Button text="Go to Main Menu" display-tooltip-when-elided="true" class="menu-button" style="position: absolute; bottom: -50px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="game-over-container" style="width: 100%; height: 100%; align-items: center; justify-content: center; display: none;">
+        <ui:VisualElement class="primary-container" style="width: 600px; height: 500px; align-items: center; justify-content: center;">
+            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Paper%20BG.png?fileID=2800000&amp;guid=b1aa48f59209ca54f8ad1e5966d3e81d&amp;type=3#Paper BG&apos;); width: 350px; height: 350px; align-items: center; justify-content: center;">
+                <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Game%20Over.png?fileID=2800000&amp;guid=127de711d0ac2e44487e5407a2913a64&amp;type=3#Game Over&apos;); width: 250px; height: 250px;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Game Over!!!" display-tooltip-when-elided="true" class="base-text" style="font-size: 40px; -unity-text-align: upper-center; margin-top: 40px;" />
+            <ui:Button text="Go to Main Menu" display-tooltip-when-elided="true" class="menu-button" style="position: absolute; bottom: -50px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="pause-container" style="width: 100%; height: 100%; align-items: center; justify-content: center; display: none;">
+        <ui:VisualElement class="primary-container" style="width: 600px; height: 500px; align-items: center;">
+            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Paper%20BG.png?fileID=2800000&amp;guid=b1aa48f59209ca54f8ad1e5966d3e81d&amp;type=3#Paper BG&apos;); width: 350px; height: 350px; align-items: center; justify-content: center; display: flex;">
+                <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Pause.png?fileID=2800000&amp;guid=b36e3c38a6e787648bb7772a0879a6ef&amp;type=3#Pause&apos;); width: 250px; height: 250px; display: flex;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Game Paused" display-tooltip-when-elided="true" class="base-text" style="font-size: 40px; -unity-text-align: upper-center; margin-top: 40px;" />
+            <ui:Button text="Unpause" display-tooltip-when-elided="true" class="menu-button" style="position: absolute; bottom: -50px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
